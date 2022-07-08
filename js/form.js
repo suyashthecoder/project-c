@@ -45,14 +45,16 @@ class Form{
         });
 
         this.reset.mousePressed(() => {
-            player.updateCount(0);
-            game.update(0);
+        database.ref("/").set({
+        playersAtEnd:0,
+            playerCount:0,
+            gameState:0,
+            players:{}
+        })
+window.location.reload()
 
 
-
-            var playerInfoRef = database.ref('players');
-            playerInfoRef.remove();
-
+     
             
         });
 
