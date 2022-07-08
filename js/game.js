@@ -116,6 +116,7 @@ class Game{
                  }
                  if(frameCount % 40 === 0){
                     //call the addObstacles()
+                     this.addObstacles()
                  }
                  
                   if (player.index !== null) {
@@ -133,6 +134,7 @@ class Game{
 
                       if(obstacleGroup.isTouching(players)){
                        //write a code to assign the value of gameState to End
+                          gameState=2
                       }
                   }
                 }
@@ -166,7 +168,7 @@ class Game{
     {       
             var x, y;
             //write a code to create an obstacle at random x position.
-            
+            x=random(0,width-100)
             
             y = 0
             var obstacle = createSprite(x, y);
